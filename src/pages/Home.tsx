@@ -1,12 +1,10 @@
-import {Navbar} from '../component/Navbar'
 import {GameCard} from '../component/GameCard'
 import {InfluencerCard} from '../component/InfluencerCard'
 
 import { SERVICES } from '../types'
 import {Games} from '../types'
 
-import { useState, useRef, type SetStateAction } from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'  
+import { useState, useRef, } from 'react'
         
 export const Home = () => {
     
