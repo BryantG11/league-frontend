@@ -1,6 +1,6 @@
 import './App.css'
 import { Home } from './pages/Home'
-import { Settings } from './pages/Settings.tsx'
+import { Settings } from './pages/settings.tsx'
 import { Loyalty } from './pages/loyalty.tsx'
 import { Blocked } from './pages/blocked.tsx'
 import { Favorites } from './pages/favorites.tsx'
