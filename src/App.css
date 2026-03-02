@@ -1,0 +1,338 @@
+#root {
+  text-align: center;
+  color: whitesmoke;
+}
+
+* {
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+}
+
+main {
+  width: 1280px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.call-to-action {
+  width: 100%;
+  height: 200px;
+  border-bottom: 1px solid #c3e100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+}
+
+.call-to-action h1 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.call-to-action .anytime {
+  background: linear-gradient(
+    to right, 
+    #33ccff 0%, 
+    #3399ff 50%, 
+    #6666ff 100%
+  );
+  /* The Magic Trick */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+  .call-to-action .time {
+    color: #9184ff;
+  }
+  
+
+.call-to-action .temp img {
+  width: 100%;
+  height: 100%;
+  translate: 0px 25%;
+}
+
+.game-select {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+}
+
+.game-select .title {
+  color: #f87b20;
+  text-align: left;
+  width: 100%;
+  height: 50px;
+}
+
+.game-select button {
+  position: absolute;
+  top: 40%; /* Center relative to the images, not the whole card */
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #24242d;
+  color: #ffffff;
+  border: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s;
+}
+
+/* .game-select button:hover {
+  background-color: #c3e100;
+} */
+
+.game-select button.right {
+  right: 250px;
+}
+
+.game-select button.left {
+  left: 250px;
+}
+
+.game-select .game-cards {
+  gap: 1rem;
+  display: flex;
+  width: 100%;
+  height: 300px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.game-select .game-cards::scroll-button(right) {
+  content: '>';
+  background-color: #c3e100;
+  width: 500px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.game-select .game-cards::-webkit-scrollbar {
+  display: none;
+}
+
+
+.main-form {
+  width: 100%;
+  height: 1500px;
+  display: flex;
+}
+
+.account {
+  width: 100%;
+  height: 100px;
+  text-align: left;
+  color: #f87b20;
+
+}
+
+.account-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+  border-bottom: 1px solid #3c3c42
+}
+
+.account-box .left-acc {
+  width: 30%;
+  height: 100%;
+  margin: 0;
+  background-color: lightyellow;
+}
+
+.account-box .right-acc {
+  width: 20%;
+  height: 100%;
+  margin: 0;
+  background-color: lightpink;
+}
+
+.form {
+  width: 600px;
+  height: 100%;
+  text-align: left;
+}
+.form p {
+
+}
+/* ------------------------ */
+.selection-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: -1px; /* Overlap borders for a clean list look */
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+    position: relative;
+}
+
+
+
+/* Hide the default radio button */
+.selection-item input[type="radio"] {
+    display: none;
+}
+
+/* Custom Radio Circle */
+.radio-custom {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #777;
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+}
+
+/* ACTIVE STATE LOGIC */
+/* When the radio is checked, style the container */
+.selection-item:has(input:checked) {
+    background-color: #1f2700;;
+    z-index: 1; /* Brings active border to front */
+}
+
+/* Inner dot for the custom radio when active */
+.selection-item:has(input:checked) .radio-custom {
+    background-color: black;
+    border: 3px solid#b9f200;
+}
+
+/* Layout Styling */
+.icon-box img { width: 40px; margin-right: 15px; }
+
+.details-box {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.main-info { display: flex; flex-direction: column; }
+.type { font-weight: bold; font-size: 16px; }
+.desc { font-size: 12px; color: #ccc; margin: 4px 0; }
+.see-details { font-size: 0.75rem; color: #7ba100;}
+
+.price-box {
+    text-align: right;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.price { font-weight: bold; font-size: 12px; }
+.status { font-size: 10px; opacity: 0.7; }
+
+.radio-container .title {
+  color: #f87b20;
+}
+
+.radio-container .label .label-info {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: #4d4d4d;
+  text-align: center;
+}
+/* ------------------------ */
+
+.quantity-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quantity-container .counter {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  height: 100%;
+  color: whitesmoke;
+}
+
+.counter button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.3rem;
+  background-color: transparent;
+  color: whitesmoke;
+}
+
+.play-button {
+  width: 100%;
+  height: 60px;
+  background-color: #b9f200;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+
+}
+
+
+.graphic {
+  top: 0;
+  width: 55%;
+  height: 100%;
+  background-image: url('./assets/globe-white.png');
+  background-repeat: no-repeat;
+}
+
+.influencers {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.influencers h2 {
+  font-weight: 700;
+}
+
+.reel-container {
+  width: 100%;
+  height: 550px;
+  border-bottom: 1px solid #c3e100;
+  display: flex;
+  gap: 1rem;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+  animation: scrolling 10s linear infinite;
+}
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

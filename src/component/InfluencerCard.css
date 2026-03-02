@@ -1,0 +1,31 @@
+.influencer-card {
+    position: relative;
+    height: 420px;
+    width: 250px;
+    border-radius: 5%;
+    background-color: white;
+    flex: 0 0 auto;
+    background-image: url("/2davie.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.card-footer {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+    
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.play {
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+.name {
+    background-color: transparent;
+    margin-right: 10px;
+}
