@@ -1,47 +1,19 @@
 import './App.css'
 import { Home } from './pages/Home'
-import { Settings } from './pages/Settings'
-import { Loyalty } from './pages/loyalty'
-import { Blocked } from './pages/blocked'
-import { Favorites } from './pages/favorites'
-import { History } from './pages/history'
-import { Inventory } from './pages/inventory'
-import {Navbar} from './component/Navbar'
+import { Settings } from './pages/Settings.tsx'
+import { Loyalty } from './pages/loyalty.tsx'
+import { Blocked } from './pages/blocked.tsx'
+import { Favorites } from './pages/favorites.tsx'
+import { History } from './pages/history.tsx'
+import { Inventory } from './pages/inventory.tsx'
+import {Navbar} from './component/Navbar.tsx'
 
-import { SERVICES } from './types'
-
-import { useState, useRef } from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Profile } from './pages/Profile'
 
 
 
 function App() {
-  const [selectedMode, setSelectedMode] = useState('mode1');
-  const [quantity, setQuantity] = useState(1);
-  
-  const [selectedGameId, setSelectedGameId] = useState(1)
-
-  const activeMode = SERVICES.find(service => service.id === selectedMode);
-  const price = activeMode ? activeMode.price : 0;
-
-  const navRef = useRef<HTMLDivElement>(null);
-
-  const handleScroll = (x: number) => {
-    if(navRef.current) {
-      navRef.current.scrollBy({ left: x, behavior: 'smooth'});
-    }
-  }
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  }
-
-  const handleCardClick = (id: number) => {
-    setSelectedGameId(id)
-    console.log(id);
-    console.log(selectedGameId);
-  }
 
   return (
     <>
