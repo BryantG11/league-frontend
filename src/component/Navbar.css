@@ -87,18 +87,10 @@ nav {
 .profile-circle {
   width: 90px;    
   height: 45px;
-  border: 1px solid #374053;
   border-radius: 50px;
   background-color: #242b39;
   display: flex;
   margin-right: 5rem;
-}
-
-.profile-pic {
-  flex: 1;
-  height: 80%;
-  margin: auto;
-  padding: 2px;
 }
 
 .profile-pic img {
@@ -134,7 +126,13 @@ nav {
   background-color: whitesmoke;
   color: black;
   width: 200px;
-  padding: 10px;
+  padding: 5px;
+}
+
+.dropdown-item:visited, .dropdown-item {
+  text-decoration: none;
+  
+
 }
 
 .profile-item {
@@ -145,13 +143,25 @@ nav {
   margin-bottom: 20px;
 }
 
-.profile-item .profile-pic {
-  border: 1px dashed darkgray;
+.profile-item:hover {
+  opacity: 0.7;
+  
 }
 
-.profile-item .profile-name {
-  border: 1px dashed rgb(13, 12, 66);
+
+.profile-pic {
+  flex: 1;
+  height: 80%;
+  margin: auto;
+  padding: 2px;
 }
+
+.profile-name {
+  flex: 4;
+  margin-left: 5px;
+}
+
+
 
 .profile-circle:after {
   position: absolute;
@@ -176,5 +186,5 @@ nav {
 
 .dropdown-item:hover {
   background-color: #d5ff4d;
-  border-radius: 15px;
+  border-radius: 10px;
 }

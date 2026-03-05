@@ -4,12 +4,10 @@
 }
 
 .profile-container {
-    width: 40%;
-    height: 40%;
+    width: 800px;
+    height: 400px;
     margin: 40px auto;
     padding: 5px;
-    border: 1px dashed darkorange; 
-    
     display: flex;
     flex-direction: column;
 
@@ -18,11 +16,70 @@
 .profile-container .profile-top-part {
     width: 100%;
     height: 15%;
-    background-color: lightcyan;
+    display: flex;
 }   
+
+.profile-container .profile-top-part .back-button {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: whitesmoke;
+} 
+
+.profile-container .profile-top-part h3 {
+    width: 90%;
+    height: 100%;
+    color: whitesmoke;
+    text-align: left;
+}
 
 .profile-container .profile-bottom-part {
     width: 100%;
     height: 85%;
-    
+    display: flex;
+    border: 1px dashed crimson;
+}
+
+.profile-container .profile-bottom-part .pfp {
+    width: 30%;
+    height: 100%;
+    border: 1px dashed darkorange;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container .profile-bottom-part .pfp .img {
+    width: 90%;
+    height: 65%;
+    background-color: #242b39;
+    border-radius: 50%;
+}
+
+.profile-container .profile-bottom-part .profile-form {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px dashed rgb(58, 16, 173);
+}
+
+.profile-form {
+    text-align: left;
+}
+
+.profile-form p {
+    height: 20px;
+    color: whitesmoke;
+}
+
+.profile-form input {
+    height: 50px;
+    color: whitesmoke;
+    background-color: #242b39;
+    border: none;
+    margin-top: 0;
 }

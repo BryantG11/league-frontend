@@ -24,6 +24,11 @@ img {
   height: auto;
 }
 
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .call-to-action {
   width: 100%;
@@ -160,24 +165,36 @@ img {
   width: 30%;
   height: 100%;
   margin: 0;
-  background-color: lightyellow;
+  display: flex;
+  color: whitesmoke;
+}
+
+.account-box .left-acc .icon {
+  width: 30px;
+  height: 30px;
 }
 
 .account-box .right-acc {
   width: 20%;
   height: 100%;
   margin: 0;
-  background-color: lightpink;
+  display: flex;
+  color: whitesmoke;
 }
+
+.account-box .right-acc .icon {
+  width: 30px;
+  height: 30px;
+}
+
+
 
 .form {
   width: 600px;
   height: 100%;
   text-align: left;
 }
-.form p {
 
-}
 /* ------------------------ */
 .selection-item {
     display: flex;
